@@ -5,7 +5,7 @@ int main() {
     int matrix_b[10][10];
     int m;
     int n;
-	scanf("%d%d", &m, &n);
+    scanf("%d%d", &m, &n);
     int i;
     int j;
     for (i = 0; i < m; i++) {
@@ -13,15 +13,15 @@ int main() {
             scanf("%d", &matrix_a[i][j]);
         }
     }
-	for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) {
         for (j = 0; j < m; j++) {
             scanf("%d", &matrix_b[i][j]);
         }
     }
-    int sum[m][m];
+    int sum[10][10];
     for (i = 0; i < m; i++) {
         for (j = 0; j < m; j++) {
-            sum[m][m] = 0;
+            sum[i][j] = 0;
         }
     }
     for (i = 0; i < m; i++) {
