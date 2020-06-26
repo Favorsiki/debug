@@ -5,6 +5,7 @@
 double bisection(int p, int q, double (*func)(int, int, double));
 double f(int p, int q, double x);
 
+
 int main() {
     int p;
     int q;
@@ -12,7 +13,6 @@ int main() {
     printf("%.4f\n", bisection(p, q, f));
     return 0;
 }
-
 
 //二分近似法求解方程组解函数，用来求解方程式的近似解
 //输入参数：方程组系数p,q;方程组求值函数的函数指针func

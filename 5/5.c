@@ -10,22 +10,25 @@ int main() {
         scanf("%s", name[i]);    
     }
     for (j = 0; j < m; j++) {
-        for (i = 0; i < m -1; i ++) {
+        for (i = 0; i < m -1; i++) {
             if(strcmp(name[i], name[i + 1]) > 0){
-                swap(&name[i], &name[i + 1]);    
+                swap(name[i], name[i + 1]);    
             }
         }
     }
     for (i = 0; i < m; i++) {
-        printf("%s\n", name[i]);    
+        printf("%s", name[i]);
+            if (i != m - 1) {
+                printf("\n");
+            }
     }
     return 0;
 }
 
 
 void swap (char *b, char *c) {
-    int temp;
-    temp = *b;
-    *b= *c;
-    *c = temp;
+    char temp[21];
+    strcpy(temp, b);
+    strcpy(b, c);
+    strcpy(c, temp);
 }
