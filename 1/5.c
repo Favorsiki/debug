@@ -12,7 +12,12 @@ int main() {
     return 0;
 }
 
-double bisection(int p, int q, double (*func)(int, int, double)) {    double a;
+
+//二分近似法求解方程组解函数，用来求解方程式的近似解
+//输入参数：方程组系数p,q;方程组求值函数的函数指针func
+//返回值：返回一个double型值xp，该值是方程组的近似解
+double bisection(int p, int q, double (*func)(int, int, double)) {
+    double a;
     double b;
     double c;
     a = 20;
@@ -20,16 +25,19 @@ double bisection(int p, int q, double (*func)(int, int, double)) {    double a;
     c = (a + b)/ 2;
     while(fabs(f(p,q,c)) >= EPSILON){
         if((f(p,q,a) * f(p,q,c)) < 0) {
-            c = (c + a)/ 2, b = c,c = (a + b)/2;
+            b = c,c = (a + b)/2;
         }
         if((f(p,q,b) * f(p,q,c)) < 0) {
-            c = (b + c)/ 2, a = c,c = (a + b)/2;
+            a = c,c = (a + b)/2;
         }
     }
-    return c;
-        
+    return c; 
 }
 
+/*方程式求值函数
+ *输入参数：方程组系数p，q;方程式的未知量x
+ *返回值：double型值，表示该方程式的值
+*/
 double f(int p, int q, double x) {
     return p * x + q;
 }
