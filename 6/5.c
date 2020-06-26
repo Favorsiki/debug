@@ -25,18 +25,18 @@ int main() {
     }
     
     while (scanf("%s", operation) != EOF) {
-        if (operation[1] == '+' && operation[1] == 'r') {
-            counter += 4;
-        } else if (operation[1] == '+' && operation[1] == 'w') {
-            counter += 2;
-        } else if (operation[1] == '+' && operation[1] == 'x') {
-            counter += 1;   
-        } else if (operation[1] == '-' && operation[1] == 'r') {
-            counter -= 4; 
-        } else if (operation[1] == '-' && operation[1] == 'w') {
-            counter -= 2;
+        if (operation[0] == '+' && operation[1] == 'r') {
+            counter = counter | 4;
+        } else if (operation[0] == '+' && operation[1] == 'w') {
+            counter = counter | 2;
+        } else if (operation[0] == '+' && operation[1] == 'x') {
+            counter = counter | 1;   
+        } else if (operation[0] == '-' && operation[1] == 'r') {
+            counter = counter & ~4; 
+        } else if (operation[0] == '-' && operation[1] == 'w') {
+            counter = counter & ~2;
         } else {
-            counter -= 1;
+            counter = counter & ~1;
         }
     }
     
