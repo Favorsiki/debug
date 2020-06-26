@@ -9,7 +9,7 @@ int main() {
     for (i = 0; i < 10; i++) {
             memset(name, 0, 21);
             scanf("%s", name);
-        for (j = 0; j < strlen(name); j++) {
+        for (j = 0; j <= strlen(name); j++) {
             names[i][j] = name[j];
             }
         }
@@ -24,8 +24,11 @@ int main() {
         }
     }
     
-    for(i = 0; i < 10; i++) {
-        printf("%s\n", names[i]);
+    for (i = 0; i < 10; i++) {
+        printf("%s", names[i]);
+        if (i != 9) {
+            printf("\n");
+        }
     }
 
 
