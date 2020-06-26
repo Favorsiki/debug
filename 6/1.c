@@ -14,7 +14,6 @@ int main() {
             current += 1;
         }
     }
-    printf("%d\n", current);
     char reqrmt[3];
     int req = 0;
     while (scanf("%s", reqrmt) != EOF) {
@@ -30,10 +29,7 @@ int main() {
         } else {
             current = current & (~req);
         }
-        printf("%s\n", reqrmt);
-        printf("%d\n", req);
     }
-    
-    printf("%d\n", current);
+    printf("%d", current);
     return 0;
 }
