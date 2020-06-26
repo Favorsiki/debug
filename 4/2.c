@@ -9,23 +9,23 @@ void swap(int *a, int *b){
 
 int main() {
     int n = 10;
-    int numbers[n];
+    int numbers[10];
     int i;
-	int j;
+    int j;
     // 读入给定的数字
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
-	for (i = 0; i < n; i++) {
-        for (j = n - 1; j > i; j--){
+    for (i = 0; i < n; i++) {
+        for (j = n - 1; j > i; j--) {
             if ( numbers[j - 1] < numbers[j]) {
                 swap(&numbers[j - 1], &numbers[j]);                
             }
         }
     }
-	for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) {
         printf("%d", numbers[i]);
-        if (i != n) {
+        if (i != n - 1) {
             printf(" ");
         }
     }
