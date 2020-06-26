@@ -3,7 +3,7 @@
 int main() {
     int n;
     scanf("%d\n", &n);
-    char names[n][101];
+    char names[5000][101]={0};
     char max[101];
     
     for (int i = 0; i < n; i++) {
@@ -12,15 +12,14 @@ int main() {
     
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n - 1 - i; j++) {
-            max == names[j+1];
-            if (strlen(names[j]) > strlen(names[j+1])) {
+            if (strlen(names[j]) >= strlen(names[j+1])) {
                 strcpy(max, names[j]);
                 strcpy(names[j], names[j+1]);
-                strcpy(names[j], max);
+                strcpy(names[j + 1], max);
             }
         }
     }
     
-    printf("%s\n", max);
+    printf("%s\n", names[n - 1]);
     return 0;
 }
