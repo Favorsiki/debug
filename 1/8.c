@@ -32,17 +32,13 @@ double bisection(int p, int q, double (*func)(int, int, double)) {
            if (p < 0) {
                if (fa > 0 && fx > 0) {
                    a = x;
-               }  
-	       else {
+               } else {
                    b = x;
                }
-    	   }
-	   else {
+    	   } else {
                if (fx > 0) {
                    b = x;
-               }
-
-	       else {
+               } else {
                    a = x;
                }
            }  

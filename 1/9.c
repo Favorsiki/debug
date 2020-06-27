@@ -24,16 +24,13 @@ double bisection(int p, int q, double (*func)(int, int, double)) {
         if(p > 0) {
             if(f(p, q, (a + b) / 2 )< 0) {
                 a = (a + b) / 2;
-            }
-    	    else {
+            } else {
                 b = (a + b) / 2
             }
-	}
-	else {
+	} else {
             if(f(p, q, (a + b) / 2 ) < 0) {
                 b = (a + b) / 2;
-	    }
-    	    else {
+	    } else {
                 a = (a + b) / 2;
 	    }
 	}

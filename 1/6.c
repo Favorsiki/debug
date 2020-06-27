@@ -22,8 +22,7 @@ double bisection (int p, int q, double (*func)(int, int, double)) {
         if (f(p, q, m) * f(p, q, a) < 0) {
             b = m;
             m = (a + b) / 2;
-        }
-        else {
+        } else {
             a = m;
             m = (a + b) / 2;
         }
