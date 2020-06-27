@@ -22,10 +22,16 @@ int main() {
             scanf("%d", &matrix_b[nIndex][mIndex]);
         }
     }
+
+    for(nIndex = 0; nIndex < m; nIndex ++){
+        for(mIndex = 0; mIndex < m; mIndex ++){
+            matrix_result[mIndex][nIndex] = 0;
+        }
+    }
     
     for(mIndex = 0; mIndex < m; mIndex ++){
-        for(nIndex = 0; nIndex < n; nIndex ++){
-            for(j = 0; j < n + 1; j ++){
+        for(nIndex = 0; nIndex < m; nIndex ++){
+            for(j = 0; j < n; j ++){
                 matrix_result[mIndex][nIndex] += matrix_a[mIndex][j] * matrix_b[j][nIndex];
             }
             

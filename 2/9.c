@@ -11,8 +11,8 @@ int main() {
 	int i, j, k;
 	
 	//³Ë»ı¾ØÕó³õÊ¼»¯
-	for (i = 0; i <= 10; i++){
-		for (k = 0; k <= 10; k++){
+	for (i = 0; i < 10; i++){
+		for (k = 0; k < 10; k++){
 			matrix_c[i][k] = 0;
 		}
 		
