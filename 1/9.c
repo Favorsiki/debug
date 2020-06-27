@@ -20,24 +20,24 @@ int main() {
 double bisection(int p, int q, double (*func)(int, int, double)) {
     double a = -20;
     double b = 20;
-    while(fabs(f(p, q, (a + b) / 2)) >= EPSILON)
-	{
-	    if(p > 0)
-		{
-		    if(f(p, q, (a + b) / 2 )< 0)
-        	        a = (a + b) / 2;
-    		    else
-        		b = (a + b) / 2;
-		}
-		else
-		{
-		    if(f(p, q, (a + b) / 2 )< 0)
-        		b = (a + b) / 2;
-    		    else
-        		a = (a + b) / 2;
-		}
-   		
+    while(fabs(f(p, q, (a + b) / 2)) >= EPSILON) {
+        if(p > 0) {
+            if(f(p, q, (a + b) / 2 )< 0) {
+                a = (a + b) / 2;
+            }
+    	    else {
+                b = (a + b) / 2
+            }
 	}
+	else {
+            if(f(p, q, (a + b) / 2 ) < 0) {
+                b = (a + b) / 2;
+	    }
+    	    else {
+                a = (a + b) / 2;
+	    }
+	}
+    }
     return (a + b) / 2;
 }
 
