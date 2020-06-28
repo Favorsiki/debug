@@ -33,28 +33,28 @@ int main() {
     		for (int j = start; j < column; j++) {
                 if (start+1 == row && column-1 == j) {
                     printf("%d", matrix[start][j]);
-                    break;
+                    return 0;
                 } else
         		printf("%d ", matrix[start][j]);
     		}
     		for (int i = start + 1; i < row; i++) {
-                if (i+1 == row && column-2 == start) {
+                if (i+1 == row && column-1 == start) {
                     printf("%d", matrix[i][column-1]);
-                    break;
+                    return 0;
                 } else
        		 	printf("%d ", matrix[i][column-1]);
     		}		
     		for (int j = column-2; j >= start; j--) {
                 if (row-2 == start && j == start) {
                  printf("%d", matrix[row-1][j]);
-                    break;
+                   return 0;
                 } else
        		 	printf("%d ", matrix[row-1][j]);
    			}
     		for (int i = row-2; i > start; i--) {
                 if (i == start + 1 && start+1 == column-1) {
                   printf("%d", matrix[i][start]); 
-                    break;
+                    return 0;
                 } else
         		printf("%d ", matrix[i][start]);
    			}
