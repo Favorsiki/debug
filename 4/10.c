@@ -9,14 +9,16 @@ int main() {
     int k;
     int j;
     int o;
-    // 读入给定的数字
+
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
     for (j = 0; j < n; j++) {
-        for(k = j; k < n - 1; k++){
-            if(numbers[k] < numbers[k+1]){
-                m = k + 1;
+        max = -99999999;
+        for(k = j; k <=  n - 1; k++){
+            if (max < numbers[k]) {
+                max =  numbers[k];
+		m = k;
             }
            
         }
