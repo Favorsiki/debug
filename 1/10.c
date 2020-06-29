@@ -3,7 +3,9 @@
 #define EPSILON 1e-7
 
 double bisection(int p, int q, double (*func)(int, int, double));
+
 double f(int p, int q, double x);
+
 int main() {
     int p;
     int q;
@@ -13,22 +15,21 @@ int main() {
 }
 
 double bisection(int p, int q, double (*func)(int, int, double)) {
-    double a =-20;
+    double a = -20;
     double b = 20;
-    double m=(a+b)/2;
-    while(fabs(f(p,q,m))>EPSILON)
-    {
-        if(f(p,q,m)*f(p,q,a)<0)
-        {
-            b=m;
-        }
-        else
-        {
-            if(f(p,q,m)*f(p,q,b)<0)
-            {
-                a=m;
-            }
-        }
+    double m = (a + b) / 2;
+    while (1){    
+        if (fabs(func(p, q, m)) < EPSILON) {
+            return m;
+            break;
+	} else {
+            if (func(p, q, m) * func(p, q, a) < 0) {
+                b = m;
+            } else {
+                a = m;
+	    }
+            m = (a + b) / 2;
+    	}
     }
 }
 
