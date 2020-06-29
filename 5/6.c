@@ -6,7 +6,7 @@ int main() {
     for (i = 0;i < 10; i++) {
     	scanf("%s",&n[i]);
   	}        
-    for(i = 0;i < 10; i++) {
+    for (i = 0;i < 10; i++) {
         for (k = i + 1; k < 10; k++)
         {
             if (strcmp(n[i],n[k]) > 0) {
