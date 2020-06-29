@@ -24,8 +24,7 @@ int main() {
     for (int m = 0; m < 10; m++) {
         if (m != 9) {
             printf("%d ", numbers[m]);
-        }
-	else {
+        } else {
             printf("%d", numbers[m]);
         }
     }

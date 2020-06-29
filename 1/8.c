@@ -25,32 +25,24 @@ double bisection(int p, int q, double (*func)(int, int, double)) {
     double fa, fb, fx;
 
     do {
-        fa = f(p, q, a);
-        fb = f(p, q, b);
-        x = (a + b) / 2.0;
-        fx = f(p, q, x);
-        if(p < 0)
-        {
-        	if (fa > 0 && fx > 0) {
-            	a = x;
-        	}
-
-		else{
-            	b = x;
-        	}
-    	}
-	else
-        {
-        	if (fx > 0) {
-            	b = x;
-        	}
-
-		else{
-            	a = x;
-        	}
-    	}
-
-    } while (fabs(fx) >= EPSILON);
+           fa = f(p, q, a);
+           fb = f(p, q, b);
+           x = (a + b) / 2.0;
+           fx = f(p, q, x);
+           if (p < 0) {
+               if (fa > 0 && fx > 0) {
+                   a = x;
+               } else {
+                   b = x;
+               }
+    	   } else {
+               if (fx > 0) {
+                   b = x;
+               } else {
+                   a = x;
+               }
+           }  
+       } while (fabs(fx) >= EPSILON);
     
     return x;
 }

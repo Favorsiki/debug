@@ -17,7 +17,6 @@ int main() {
             }
         }
     }
-    
     for (i = 0; i < 9; i++) {
         printf("%s\n",names[i]);
     }

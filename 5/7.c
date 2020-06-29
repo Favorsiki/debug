@@ -18,7 +18,7 @@ int main() {
     for (j = 0; j < m; j++) {
         for (i = 0; i <m-j-1; i ++) {
             if(strcmp(name[i], name[i + 1]) > 0){ 
-                    swap(&name[i], &name[i+1]);    
+                  swap(&name[i], &name[i+1]);    
             }
         }
     }
@@ -28,6 +28,3 @@ int main() {
     printf("%s",name[9]);
     return 0;
 }
-
-
-
