@@ -29,8 +29,7 @@ int main() {
     for (int q = 0; q < n; q++) {
         if (q == 9) {
             printf("%d", numbers[q]);
-        } 
-	else {
+        } else {
             printf("%d ", numbers[q]);
         }
     }
