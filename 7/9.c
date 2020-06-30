@@ -2,13 +2,17 @@
 int main(){
     int y,m,d;
     scanf("%d-%d-%d",&y,&m,&d);
-   
+
     if (m == 2) {
         if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
             if (d >= 1 && d <= 29) {
                 printf("YES");
-	    }
-	} else {
+            } else {
+        	printf("NO");
+	    }    
+        } else if (d >= 1 && d <= 28) {
+            printf("YES");
+        } else {
             printf("NO");
 	}
     }
@@ -16,19 +20,19 @@ int main(){
         if (d >= 1 && d <= 31) {
             printf("YES");
         } else {
-	    printf("NO");
-	}
+            printf("NO");
+        }
     }
     if (m == 4 || m == 6 || m == 9 || m == 11) {
         if (d >= 1 && d <= 30) {
             printf("YES");
-	} else {
-	    printf("NO");
-	}
+        } else {
+            printf("NO");
+        }
     }
     if (m > 12 || m < 1) {
-    	printf("NO");
+        printf("NO");
     }
-       
+
     return 0;
 }
