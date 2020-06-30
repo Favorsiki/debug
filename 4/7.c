@@ -15,6 +15,7 @@ int main() {
         for (m = i; m <= 9; m++) {
             if (maxnum  < numbers[m]) {
                 max = m;
+		maxnum = numbers[m];
             }
         }
 	if (max != i) {
