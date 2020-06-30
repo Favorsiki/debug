@@ -38,10 +38,7 @@ int main() {
         }
         if (l < n) {
             for (int i = m - 1; i >= k; i--) {
-                printf(" %d", matrix[i][l]);
-                if (i != k) {
-                    printf(" ");
-                }  
+                printf(" %d", matrix[i][l]);  
             }
             l++;    
         }        
