@@ -4,6 +4,7 @@ int main() {
     char string[10][21];
     char str[21];
     int i, j;
+
     for (i = 0;i < 10; i++) {
     	scanf("%s",&string[i]);
     } 

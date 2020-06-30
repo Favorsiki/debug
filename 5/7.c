@@ -33,6 +33,7 @@ int main() {
                 if (cnt < n * m) {
                     printf(" ");
                 }
+
             }
         }
        
@@ -74,6 +75,3 @@ int main() {
    
     return 0;
 }
-
-
-
