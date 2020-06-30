@@ -41,8 +41,8 @@ Node *circle_create(int n) {
 
 void count_off(Node *head, int n, int k, int m) {
     Node *temp, *prev;
-    temp = head;
-    prev = temp;
+    temp = head->next;
+    prev = head;
     
     while (temp != NULL && temp->data != k) {
         prev = temp;

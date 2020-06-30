@@ -64,9 +64,8 @@ void count_off(Node *head, int n, int k, int m) {
         }
         printf("%d", find->data);
         p->next = find->next;
-        free(find);
         find = p;
-        if (y !=n - 1)
+        if (y != n - 1)
         {
             printf(" ");
         }
