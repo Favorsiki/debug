@@ -40,24 +40,34 @@ Node *circle_create(int n) {
 }
 
 void count_off(Node *head, int n, int k, int m) {
-    Node *p=head;
-    Node *q;
+    Node *p = head;
+    Node *q = head;
+	int flag = 0;
+	while (q->data != n) {
+        	q = q->next;
+    }
     if (p != NULL) {
     	while (p->data != k) {
         	p = p->next;
         }
         while (p != p->next) {
-            int j=1;
+            int j = 1;
             while (j < m - 1) {
             	p = p->next;
             	++j;
 			}
-            q = p->next;
-            printf("%d ", q->data);
-            p->next = q->next;
-            free(q);
-            q = NULL;
-            p = p->next;
+			if (m == 1 && flag == 0) {
+				p = q;
+			}
+			flag = 1;
+			q = p->next;
+			printf("%d ", q->data);
+			p->next = q->next;
+			free(q);
+			q = NULL;
+			if (m > 1) {
+				p = p->next;
+			}
         }
         printf("%d", p->data);
     }

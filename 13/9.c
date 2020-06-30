@@ -69,9 +69,11 @@ void count_off(Node *head, int n, int k, int m) {
                  printf(" ");
             }
         }
-        pre = temp;
-        temp = temp->next;
-        i++;
+        if (i < m) {
+            pre = temp;
+            temp = temp->next;
+            i++;
+        }
     }
     return;
 }

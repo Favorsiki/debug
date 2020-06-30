@@ -27,7 +27,7 @@ void f(char string[]) {
         bits[j] = arr[31 - j] ^ (arr[j] << 1);
         result[j] = (char)(bits[j] % 85 + 34);
     }
-    for (j = 0; j < 33; j++) {
+    for (j = 0; j < 32; j++) {
         printf("%c", result[j]);
 	}
 }
