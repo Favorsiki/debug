@@ -4,7 +4,7 @@ int main() {
     int n;
     int i, j;
     scanf("%d\n", &n);
-    char string[n][101];
+    char string[1000][101];
     for (i = 0; i < n; i++){
         for (j = 0; j < 100; j++) {
             scanf("%c", &string[i][j]);
@@ -15,7 +15,7 @@ int main() {
         }
     }
     char str[200];
-    for (i = 0; i < n-1; i++){
+    for (i = 0; i < n-1; i++) {
         if (strlen(string[i]) >= strlen(string[i+1])) {
             strcpy(str,string[i]);
             strcpy(string[i],string[i+1]);
