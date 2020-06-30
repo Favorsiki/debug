@@ -33,7 +33,7 @@ int main() {
 	printf("NO");
     } else if ((a % 4 == 0 && a % 100 != 0) && (b == 2) && (c < 1 || c > 29)) {
 	printf("NO");
-    } else if ((a % 4 != 0) && (c < 1 || c > 28)) {
+    } else if ((a % 4 != 0) && (b == 2) && (c < 1 || c > 28)) {
 	printf("NO");
     } else {
 	printf("YES");
